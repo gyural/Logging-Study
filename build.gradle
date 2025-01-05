@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.4.1'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'org.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.mysql:mysql-connector-j'
+
+    implementation 'org.slf4j:slf4j-api:2.0.16'
+
+//    slf4j의 의존성 코어와 충돌우려로 코어 의존성 추가적으로 제외
+//    slf4j와 logback-core는 Artifact에 맞게 재설정하는게 유리하다고 함
+    implementation ('ch.qos.logback:logback-classic:1.5.6'){
+//        exclude group: 'org.slf4j', module: 'logback-core'
+//        exclude group: 'ch.qos.logback', module: 'logback-core'
+    }
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

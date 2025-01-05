@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${db-url:jdbc:mysql://localhost:3306/example}
+    username: ${db-username:example}
+    password: ${db-password:example}
