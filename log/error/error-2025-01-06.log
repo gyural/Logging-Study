@@ -1,0 +1,2 @@
+[2025-01-06 18:12:07:8996790] [32m[http-nio-8080-exec-2][0;39m [1;31mERROR[0;39m [1;37m[org.example.loggingstudy.Slf4jRestControllerAdvice.exception:[33m20[0;39m][0;39m - Internal Server Exception: No static resource swagger-ui/index.html.
+[2025-01-06 18:12:07:8996858] [32m[http-nio-8080-exec-3][0;39m [1;31mERROR[0;39m [1;37m[org.example.loggingstudy.Slf4jRestControllerAdvice.exception:[33m20[0;39m][0;39m - Internal Server Exception: No static resource favicon.ico.
