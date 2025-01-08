@@ -14,9 +14,10 @@
     </springProfile>
 
     <springProfile name="prod">
-        <include resource="file-info-appender.xml"/>
-        <include resource="file-warn-appender.xml"/>
-        <include resource="file-error-appender.xml"/>
+<!--        <include resource="file-info-appender.xml"/>-->
+<!--        <include resource="file-warn-appender.xml"/>-->
+<!--        <include resource="file-error-appender.xml"/>-->
+        <include resource="LOGSTASH"></include>
 
         <root level="INFO">
             <appender-ref ref="FILE-INFO"/>

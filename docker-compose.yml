@@ -26,11 +26,10 @@ services:
     # Elastic search 계정정보
     environment:
       discovery.type: single-node
-      xpack.security.enabled: true
+      xpack.security.enabled: false
       xpack.security.transport.ssl.enabled: false
       xpack.ml.use_auto_machine_memory_percent: true
-      ELASTIC_USERNAME: "elastic"
-      ELASTIC_PASSWORD: "elastic123!@#"
+#      ELASTIC_PASSWORD: "elastic123!@#"
     networks:
       - elk
 
@@ -39,7 +38,7 @@ services:
     container_name: logstash
     image: docker.elastic.co/logstash/logstash:7.17.16
     ports:
-      - "5001:5000"
+      - "5001:5001"
       - "9600:9600"
     volumes:
       - ./logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
