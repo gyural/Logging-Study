@@ -17,12 +17,13 @@
 <!--        <include resource="file-info-appender.xml"/>-->
 <!--        <include resource="file-warn-appender.xml"/>-->
 <!--        <include resource="file-error-appender.xml"/>-->
-        <include resource="LOGSTASH"></include>
+        <include resource="logstash-append.xml"></include>
 
         <root level="INFO">
-            <appender-ref ref="FILE-INFO"/>
-            <appender-ref ref="FILE-WARN"/>
-            <appender-ref ref="FILE-ERROR"/>
+<!--            <appender-ref ref="FILE-INFO"/>-->
+<!--            <appender-ref ref="FILE-WARN"/>-->
+<!--            <appender-ref ref="FILE-ERROR"/>-->
+            <appender-ref ref="LOGSTASH" />
         </root>
     </springProfile>
 </configuration>

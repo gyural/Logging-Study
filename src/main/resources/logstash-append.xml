@@ -1,7 +1,7 @@
 <included>
     <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
         <!-- Logstash 서버의 호스트 및 포트 -->
-        <destination>logstash:5000</destination>
+        <destination>127.0.0.1:5001</destination>
 
         <!-- JSON 로그 포맷 설정 -->
         <encoder class="net.logstash.logback.encoder.LogstashEncoder">
@@ -9,6 +9,6 @@
         </encoder>
 
         <!-- 재연결 정책 -->
-        <reconnectionDelay>5000</reconnectionDelay> <!-- 5초마다 재시도 -->
+        <reconnectionDelay>5001</reconnectionDelay> <!-- 5초마다 재시도 -->
     </appender>
 </included>
