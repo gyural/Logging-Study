@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:}
   jpa:
     database: mysql
     hibernate:
@@ -9,3 +11,6 @@ spring:
     url: ${db-url:jdbc:mysql://localhost:3306/example}
     username: ${db-username:example}
     password: ${db-password:example}
+logstash:
+  host: ${LOGSTASH_HOST:localhost}
+  port: ${LOGSTASH_PORT:5001}
