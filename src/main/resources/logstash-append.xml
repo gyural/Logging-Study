@@ -6,7 +6,7 @@
 
 <!--         Logstash 서버의 호스트 및 포트 -->
 <!--        <destination>${logstash_host:localhost}:${logstash_port:5003}</destination>-->
-        <destination>logstash01:5001</destination>
+        <destination>localhost:5001</destination>
 
         <!-- JSON 로그 포맷 설정 -->
         <encoder class="net.logstash.logback.encoder.LogstashEncoder">
