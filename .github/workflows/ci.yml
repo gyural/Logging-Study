@@ -6,7 +6,7 @@ on:
       - main 
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
     steps:
       # 커밋한 파일들을 불러옴
